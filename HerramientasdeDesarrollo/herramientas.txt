@@ -1,2 +1,1 @@
-Lenguaje de programacion:
-Java
+Lenguaje:Java
