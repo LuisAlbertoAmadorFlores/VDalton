@@ -59,7 +59,6 @@ public class Inicio extends javax.swing.JFrame{
         setTitle("VDalton Beta 1.0");
         setUndecorated(true);
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test1/boton_cerrar.png"))); // NOI18N
         salir.setBorder(null);
@@ -72,7 +71,6 @@ public class Inicio extends javax.swing.JFrame{
                 salirMousePressed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, -1, -1));
 
         comenzar.setForeground(new java.awt.Color(255, 255, 255));
         comenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/boton_comenzar.png"))); // NOI18N
@@ -89,20 +87,49 @@ public class Inicio extends javax.swing.JFrame{
                 comenzarMousePressed(evt);
             }
         });
-        getContentPane().add(comenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/icono_usuario.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 70, 70));
 
         user.setBackground(new java.awt.Color(41, 39, 39));
         user.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         user.setForeground(new java.awt.Color(255, 255, 255));
         user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         user.setBorder(null);
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 380, 200, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/fondo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(750, 750, 750)
+                .addComponent(salir))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(470, 470, 470)
+                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addComponent(comenzar))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(540, 540, 540)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(salir)
+                .addGap(339, 339, 339)
+                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(comenzar))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(310, 310, 310)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

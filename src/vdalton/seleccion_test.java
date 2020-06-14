@@ -35,10 +35,11 @@ public class seleccion_test extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        indicacion = new javax.swing.JLabel();
-        nombre = new javax.swing.JLabel();
-        t1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
         usuario = new javax.swing.JLabel();
+        nombre = new javax.swing.JLabel();
+        indicacion = new javax.swing.JLabel();
+        t1 = new javax.swing.JLabel();
         t2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         test1 = new javax.swing.JButton();
@@ -47,33 +48,27 @@ public class seleccion_test extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        fondo = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VDalton Beta 1.0");
         setUndecorated(true);
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        indicacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_escogetest.png"))); // NOI18N
-        getContentPane().add(indicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/fondo_sinbotones.png"))); // NOI18N
+
+        usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/icono_usuario.png"))); // NOI18N
 
         nombre.setBackground(new java.awt.Color(255, 255, 255));
         nombre.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         nombre.setForeground(new java.awt.Color(255, 255, 255));
         nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, 80, 30));
+
+        indicacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_escogetest.png"))); // NOI18N
 
         t1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_test1.png"))); // NOI18N
-        getContentPane().add(t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
-
-        usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/icono_usuario.png"))); // NOI18N
-        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 60, 60));
 
         t2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_test2.png"))); // NOI18N
-        getContentPane().add(t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_minimize.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -85,7 +80,6 @@ public class seleccion_test extends javax.swing.JFrame {
                 jButton1MousePressed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, -1, 50));
 
         test1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_queves.png"))); // NOI18N
         test1.setBorder(null);
@@ -100,7 +94,6 @@ public class seleccion_test extends javax.swing.JFrame {
                 test1MousePressed(evt);
             }
         });
-        getContentPane().add(test1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 400, 100));
 
         test2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_color.png"))); // NOI18N
         test2.setBorder(null);
@@ -115,13 +108,10 @@ public class seleccion_test extends javax.swing.JFrame {
                 test2MousePressed(evt);
             }
         });
-        getContentPane().add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 390, 90));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/barra_separadora.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 540, 10));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/cuadro_traslucido.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 600, 430));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_cerrar.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -134,7 +124,6 @@ public class seleccion_test extends javax.swing.JFrame {
                 jButton2MousePressed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, 50));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_atras.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -147,13 +136,85 @@ public class seleccion_test extends javax.swing.JFrame {
                 jButton3MousePressed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/fondo_sinbotones.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 180, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jButton3))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(test2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(700, 700, 700)
+                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(710, 710, 710)
+                .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(test1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(t1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(indicacion))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(t2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(760, 760, 760)
+                .addComponent(jButton2))
+            .addComponent(fondo)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(720, 720, 720)
+                .addComponent(jButton1))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jButton3))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(430, 430, 430)
+                .addComponent(test2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addComponent(test1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(t1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(indicacion))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(390, 390, 390)
+                .addComponent(t2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(fondo)
+            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -232,7 +293,6 @@ public class seleccion_test extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nombre;
     private javax.swing.JLabel t1;
     private javax.swing.JLabel t2;

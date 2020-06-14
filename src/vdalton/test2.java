@@ -65,16 +65,12 @@ public class test2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VDalton Beta 1.0");
         setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         colorFinal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/9.png"))); // NOI18N
-        getContentPane().add(colorFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 60, 70));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/titulo_colores.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 360, 60));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones1.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 400, 40));
 
         color6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/7.png"))); // NOI18N
         color6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -82,7 +78,6 @@ public class test2 extends javax.swing.JFrame {
                 color6MouseDragged(evt);
             }
         });
-        getContentPane().add(color6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, -1, 80));
 
         color5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/5.png"))); // NOI18N
         color5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -90,7 +85,6 @@ public class test2 extends javax.swing.JFrame {
                 color5MouseDragged(evt);
             }
         });
-        getContentPane().add(color5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, -1, 80));
 
         color4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/2.png"))); // NOI18N
         color4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -98,7 +92,6 @@ public class test2 extends javax.swing.JFrame {
                 color4MouseDragged(evt);
             }
         });
-        getContentPane().add(color4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, 80));
 
         color3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/6.png"))); // NOI18N
         color3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -106,7 +99,6 @@ public class test2 extends javax.swing.JFrame {
                 color3MouseDragged(evt);
             }
         });
-        getContentPane().add(color3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, 80));
 
         color2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/8.png"))); // NOI18N
         color2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -114,7 +106,6 @@ public class test2 extends javax.swing.JFrame {
                 color2MouseDragged(evt);
             }
         });
-        getContentPane().add(color2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, 70));
 
         color1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/4.png"))); // NOI18N
         color1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -122,28 +113,20 @@ public class test2 extends javax.swing.JFrame {
                 color1MouseDragged(evt);
             }
         });
-        getContentPane().add(color1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
 
         colorInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/1.png"))); // NOI18N
-        getContentPane().add(colorInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, 70));
 
         Base4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 410, -1, 70));
 
         Base1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, 70));
 
         Base5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, 70));
 
         Base2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, 70));
 
         Base6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, 70));
 
         Base3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
-        getContentPane().add(Base3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, -1, 70));
 
         Listo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo.png"))); // NOI18N
         Listo.setBorder(null);
@@ -156,7 +139,6 @@ public class test2 extends javax.swing.JFrame {
                 ListoActionPerformed(evt);
             }
         });
-        getContentPane().add(Listo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, -1, -1));
 
         regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_atras.png"))); // NOI18N
         regresar.setBorder(null);
@@ -169,16 +151,12 @@ public class test2 extends javax.swing.JFrame {
                 regresarMousePressed(evt);
             }
         });
-        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 40, 50));
 
         c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_traslucido.png"))); // NOI18N
-        getContentPane().add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 680, 300));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones3.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 690, 40));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones2.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 430, 40));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_cerrar.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -191,7 +169,6 @@ public class test2 extends javax.swing.JFrame {
                 jButton2MousePressed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, 50));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_minimize.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -204,10 +181,139 @@ public class test2 extends javax.swing.JFrame {
                 jButton1MousePressed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, 50));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/fondo_sinbotones.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(750, 750, 750)
+                .addComponent(jButton2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(420, 420, 420)
+                .addComponent(color4)
+                .addGap(27, 27, 27)
+                .addComponent(color5))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(Base2)
+                .addGap(27, 27, 27)
+                .addComponent(Base3)
+                .addGap(107, 107, 107)
+                .addComponent(Base5))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(Listo))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(color1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(580, 580, 580)
+                .addComponent(color6))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(420, 420, 420)
+                .addComponent(Base4))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(580, 580, 580)
+                .addComponent(Base6))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(color2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(710, 710, 710)
+                .addComponent(jButton1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(colorInicial))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(660, 660, 660)
+                .addComponent(colorFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(330, 330, 330)
+                .addComponent(color3))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(Base1))
+            .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(color4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(color5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Base2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Base3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Base5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addComponent(Listo))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(color1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(color6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(Base4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(Base6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(color2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(colorInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(colorFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(color3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(Base1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(fondo)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

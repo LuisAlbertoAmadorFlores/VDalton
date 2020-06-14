@@ -190,35 +190,27 @@ public final class resultado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/titulo_resultados.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
 
         Leyenda.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         Leyenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/condicion_daltonismo.png"))); // NOI18N
         Leyenda.setToolTipText("");
-        getContentPane().add(Leyenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 510, 70));
 
         user.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         user.setForeground(new java.awt.Color(255, 255, 255));
         user.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         user.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 100, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/icono_usuario.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 60, -1));
 
         tipo.setFont(new java.awt.Font("Trebuchet MS", 1, 78)); // NOI18N
         tipo.setForeground(new java.awt.Color(255, 255, 255));
         tipo.setToolTipText("");
-        getContentPane().add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 530, 90));
 
         Mensaje.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        getContentPane().add(Mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 600, 60));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/cuadro_traslucido.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 670, 320));
 
         exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_cerrar.png"))); // NOI18N
         exit.setBorder(null);
@@ -231,7 +223,6 @@ public final class resultado extends javax.swing.JFrame {
                 exitMouseClicked(evt);
             }
         });
-        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, 40));
 
         minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_minimize.png"))); // NOI18N
         minimizar.setBorder(null);
@@ -243,7 +234,6 @@ public final class resultado extends javax.swing.JFrame {
                 minimizarMouseClicked(evt);
             }
         });
-        getContentPane().add(minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, -1, 40));
 
         ocultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_aceptar.png"))); // NOI18N
         ocultar.setBorder(null);
@@ -257,10 +247,76 @@ public final class resultado extends javax.swing.JFrame {
                 ocultarActionPerformed(evt);
             }
         });
-        getContentPane().add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 500, 270, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/fondo_sinbotones.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 590));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(720, 720, 720)
+                .addComponent(minimizar)
+                .addGap(9, 9, 9)
+                .addComponent(exit))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addComponent(jLabel3)
+                .addGap(163, 163, 163)
+                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(Leyenda, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(Mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(710, 710, 710)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(minimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Leyenda, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(Mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(500, 500, 500)
+                .addComponent(ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
