@@ -7,7 +7,6 @@
 package vdalton;
 
 
-import java.io.File;
 import javax.swing.*;
 
 
@@ -136,14 +135,14 @@ public class Inicio extends javax.swing.JFrame{
 
     private void comenzarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comenzarMousePressed
         // TODO add your handling code here:
-        seleccion_test obj = new seleccion_test();
+        Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_comenzarMousePressed
 
     private void salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMousePressed
         // TODO add your handling code here:
-        System.exit(0);
+        Runtime.getRuntime().exit(0);
         
     }//GEN-LAST:event_salirMousePressed
     
@@ -168,15 +167,10 @@ public class Inicio extends javax.swing.JFrame{
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        resultado iniciado =new resultado();
-        File consulta =new File("C:/VDalton");
+        
+        
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new resultado().setVisible(true);
-            }
-        });
+        
     }   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

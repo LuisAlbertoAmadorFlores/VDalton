@@ -20,16 +20,15 @@ import javax.swing.JOptionPane;
  *
  * @author Beto
  */
-public final class bienvenida extends javax.swing.JFrame  implements Runnable{
+public final class Bienvenida extends javax.swing.JFrame  implements Runnable{
     Inicio nv = new Inicio();
-    private String existencia;
     private Thread tiempo;
 
     /**
      * Creates new form bienvenida
      * @throws java.awt.AWTException
      */
-    public bienvenida() throws AWTException {
+    public Bienvenida() throws AWTException {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         this.setIconImage(nv.imageicon.getImage());
@@ -101,15 +100,17 @@ public final class bienvenida extends javax.swing.JFrame  implements Runnable{
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         
         //</editor-fold>
 
         /* Create and display the form */
-        resultado iniciado =new resultado();
+        Resultado iniciado =new Resultado();
         File consulta =new File("C:/VDalton");
         java.awt.EventQueue.invokeLater(() -> {
         if(0==getJavaHome()){
@@ -119,11 +120,11 @@ public final class bienvenida extends javax.swing.JFrame  implements Runnable{
                     iniciado.Registro();
                     iniciado.cargarDatos();
                 } else {
-                    new bienvenida().setVisible(true);
+                    new Bienvenida().setVisible(true);
                 }
                 
             } catch (AWTException | IOException ex) {
-                Logger.getLogger(bienvenida.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Bienvenida.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
         JOptionPane.showMessageDialog(null, "No se encontro java instalado.\nPor favor instalalo https://www.java.com/es/download/");
@@ -144,7 +145,7 @@ public final class bienvenida extends javax.swing.JFrame  implements Runnable{
                 new Inicio().setVisible(true);
                 Thread.sleep(5000);
             } catch (InterruptedException ex) {
-                Logger.getLogger(bienvenida.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Bienvenida.class.getName()).log(Level.SEVERE, null, ex);
             }
             tiempo=null;
         }

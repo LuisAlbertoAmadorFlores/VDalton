@@ -14,18 +14,18 @@ import javax.swing.Icon;
  *
  * @author Beto
  */
-public class test1 extends javax.swing.JFrame {
+public class TestUno extends javax.swing.JFrame {
 
     private int contador_protan = 0, contador_deuteran = 0, contador_preguntas = 0, contador_pNormal = 0;
     ImageIcon p1, p2, p3, p4, p5, p6, p7,error;
     Inicio vd = new Inicio();
-    resultado configuracion = new resultado();
+    Resultado configuracion = new Resultado();
     AudioClip sonido;
 
     /**
      * Creates new form asda
      */
-    public test1() {
+    public TestUno() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setIconImage(vd.imageicon.getImage());
@@ -734,7 +734,7 @@ public class test1 extends javax.swing.JFrame {
 
     private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
         // TODO add your handling code here:
-        seleccion_test obj = new seleccion_test();
+        Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarMousePressed
@@ -746,7 +746,7 @@ public class test1 extends javax.swing.JFrame {
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
-        System.exit(0);
+         Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_exitMousePressed
 
     private void listoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listoMousePressed
@@ -787,14 +787,18 @@ public class test1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(test1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestUno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(test1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestUno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(test1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestUno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(test1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestUno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -803,7 +807,7 @@ public class test1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new test1().setVisible(true);
+                new TestUno().setVisible(true);
 
             }
         });

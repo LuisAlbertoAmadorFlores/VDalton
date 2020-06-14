@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  *
  * @author Beto
  */
-public final class resultado extends javax.swing.JFrame {
+public final class Resultado extends javax.swing.JFrame {
 
     String Test;
     private TrayIcon trayicon;
@@ -34,7 +34,7 @@ public final class resultado extends javax.swing.JFrame {
     /**
      * Creates new form resultado
      */
-    public resultado() {
+    public Resultado() {
         initComponents();
         setLocationRelativeTo(null);
         user.setText(vd.usuario);
@@ -336,7 +336,7 @@ public final class resultado extends javax.swing.JFrame {
         } catch (AWTException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         } catch (IOException ex) {
-            Logger.getLogger(resultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_ocultarActionPerformed
 
@@ -350,19 +350,19 @@ public final class resultado extends javax.swing.JFrame {
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+         Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
     private void nuevotestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevotestActionPerformed
         // TODO add your handling code here:
         systemtray.remove(trayicon);
-        seleccion_test nuevo = new seleccion_test();
+        Seleccion nuevo = new Seleccion();
         nuevo.setVisible(true);
     }//GEN-LAST:event_nuevotestActionPerformed
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+         Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_exitMouseClicked
 
     private void minimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizarMouseClicked
@@ -387,21 +387,22 @@ public final class resultado extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new resultado().setVisible(true);
+                new Resultado().setVisible(true);
             }
         });
     }

@@ -11,15 +11,15 @@ package vdalton;
  *
  * @author Beto
  */
-public class test2 extends javax.swing.JFrame {
+public class TestDos extends javax.swing.JFrame {
 
     Inicio vd = new Inicio();
-    resultado configuracion = new resultado();
+    Resultado configuracion = new Resultado();
 
     /**
      * Creates new form test2
      */
-    public test2() {
+    public TestDos() {
         initComponents();
         setLocationRelativeTo(null);
         setIconImage(vd.imageicon.getImage());
@@ -55,7 +55,7 @@ public class test2 extends javax.swing.JFrame {
         Base3 = new javax.swing.JLabel();
         Listo = new javax.swing.JButton();
         regresar = new javax.swing.JButton();
-        c = new javax.swing.JLabel();
+        fondoSecundario = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -152,7 +152,7 @@ public class test2 extends javax.swing.JFrame {
             }
         });
 
-        c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_traslucido.png"))); // NOI18N
+        fondoSecundario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_traslucido.png"))); // NOI18N
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones3.png"))); // NOI18N
 
@@ -232,7 +232,7 @@ public class test2 extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(fondoSecundario, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(710, 710, 710)
                 .addComponent(jButton1))
@@ -297,7 +297,7 @@ public class test2 extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(220, 220, 220)
-                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(fondoSecundario, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(410, 410, 410)
@@ -372,7 +372,7 @@ public class test2 extends javax.swing.JFrame {
 
     private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
         // TODO add your handling code here:
-        seleccion_test obj = new seleccion_test();
+        Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_regresarMousePressed
@@ -394,20 +394,21 @@ public class test2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(test2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestDos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(test2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestDos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(test2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestDos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(test2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestDos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new test2().setVisible(true);
+                new TestDos().setVisible(true);
             }
         });
     }
@@ -420,7 +421,6 @@ public class test2 extends javax.swing.JFrame {
     private javax.swing.JLabel Base5;
     private javax.swing.JLabel Base6;
     private javax.swing.JButton Listo;
-    private javax.swing.JLabel c;
     private javax.swing.JLabel color1;
     private javax.swing.JLabel color2;
     private javax.swing.JLabel color3;
@@ -430,6 +430,7 @@ public class test2 extends javax.swing.JFrame {
     private javax.swing.JLabel colorFinal;
     private javax.swing.JLabel colorInicial;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel fondoSecundario;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
