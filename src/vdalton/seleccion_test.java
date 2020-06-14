@@ -5,31 +5,26 @@
  */
 package vdalton;
 
-import java.awt.SystemTray;
-import java.awt.TrayIcon;
+
 
 /**
  *
  * @author Beto
  */
 public class seleccion_test extends javax.swing.JFrame {
-    private TrayIcon trayicon;
-    private SystemTray systemtray;
-    VDalton vd= new VDalton();
+    Inicio vd= new Inicio();
     
     public seleccion_test() {
         initComponents();
-        this.nombre.setText(vd.usuario);
-        this.setLocationRelativeTo(null);
-        this.setIconImage(vd.imageicon.getImage());
-        instanciatray();
+        nombre.setText(vd.usuario);
+        setLocationRelativeTo(null);
+        setIconImage(vd.imageicon.getImage());
+         this.jButton1.setToolTipText("Minimizar");
+         this.jButton2.setToolTipText("Cerrar");
+         this.jButton3.setToolTipText("Regresar");
     }
     
-    public void instanciatray(){
-        trayicon = new TrayIcon(vd.imageicon.getImage(),"VDalton Activo",popup);
-        trayicon.setImageAutoSize(true);
-        systemtray = SystemTray.getSystemTray();
-    }
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,107 +35,159 @@ public class seleccion_test extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        popup = new java.awt.PopupMenu();
-        Abrir = new java.awt.MenuItem();
-        Salir = new java.awt.MenuItem();
+        indicacion = new javax.swing.JLabel();
         nombre = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        t1 = new javax.swing.JLabel();
+        usuario = new javax.swing.JLabel();
+        t2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        test1 = new javax.swing.JButton();
+        test2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
-
-        popup.setLabel("popupMenu1");
-
-        Abrir.setLabel("Abrir");
-        Abrir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AbrirActionPerformed(evt);
-            }
-        });
-        popup.add(Abrir);
-
-        Salir.setLabel("Salir");
-        Salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
-            }
-        });
-        popup.add(Salir);
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VDalton Beta 1.0");
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        indicacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_escogetest.png"))); // NOI18N
+        getContentPane().add(indicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
+
         nombre.setBackground(new java.awt.Color(255, 255, 255));
-        nombre.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        nombre.setForeground(new java.awt.Color(85, 84, 82));
+        nombre.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        nombre.setForeground(new java.awt.Color(255, 255, 255));
+        nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nombre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 60, 30));
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, 80, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/usuario.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 160, 70));
+        t1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_test1.png"))); // NOI18N
+        getContentPane().add(t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/TEST1.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setFocusPainted(false);
-        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/TEST1_press.png"))); // NOI18N
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 310, 110));
+        usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/icono_usuario.png"))); // NOI18N
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 60, 60));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/TEST2_press.png"))); // NOI18N
+        t2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/titulo_test2.png"))); // NOI18N
+        getContentPane().add(t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_minimize.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setFocusPainted(false);
-        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/TEST2.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_minimize_press.png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 310, 120));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, -1, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/letro-test.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 370, 120));
+        test1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_queves.png"))); // NOI18N
+        test1.setBorder(null);
+        test1.setBorderPainted(false);
+        test1.setContentAreaFilled(false);
+        test1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        test1.setFocusPainted(false);
+        test1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_queves_press.png"))); // NOI18N
+        test1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_queves_press.png"))); // NOI18N
+        test1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                test1MousePressed(evt);
+            }
+        });
+        getContentPane().add(test1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 400, 100));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondo.jpeg"))); // NOI18N
+        test2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_color.png"))); // NOI18N
+        test2.setBorder(null);
+        test2.setBorderPainted(false);
+        test2.setContentAreaFilled(false);
+        test2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        test2.setFocusPainted(false);
+        test2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_color_press.png"))); // NOI18N
+        test2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_color_press.png"))); // NOI18N
+        test2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                test2MousePressed(evt);
+            }
+        });
+        getContentPane().add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 390, 90));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/barra_separadora.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 540, 10));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/cuadro_traslucido.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 600, 430));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_cerrar.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_cerrar_press.png"))); // NOI18N
+        jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_cerrar_press.png"))); // NOI18N
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, 50));
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_atras.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_atras_press.png"))); // NOI18N
+        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/boton_atras_press.png"))); // NOI18N
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton3MousePressed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/fondo_sinbotones.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 180, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+        // TODO add your handling code here:
+        vd.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3MousePressed
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        // TODO add your handling code here:
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        // TODO add your handling code here:
+        setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void test1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test1MousePressed
         // TODO add your handling code here:
         test1 obj = new test1();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_test1MousePressed
 
-    private void AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirActionPerformed
-        // TODO add your handling code here:
-        systemtray.remove(trayicon);
-        this.setVisible(true);
-    }//GEN-LAST:event_AbrirActionPerformed
-
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_SalirActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void test2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test2MousePressed
         // TODO add your handling code here:
         test2 vinculo = new test2();
         vinculo.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_test2MousePressed
 
     /**
      * @param args the command line arguments
@@ -178,14 +225,20 @@ public class seleccion_test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.MenuItem Abrir;
-    private java.awt.MenuItem Salir;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel indicacion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nombre;
-    private java.awt.PopupMenu popup;
+    private javax.swing.JLabel t1;
+    private javax.swing.JLabel t2;
+    private javax.swing.JButton test1;
+    private javax.swing.JButton test2;
+    private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
+
 }

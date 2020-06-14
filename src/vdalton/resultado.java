@@ -10,35 +10,133 @@ import java.awt.SystemTray;
 import java.awt.TrayIcon;
 import javax.swing.JOptionPane;
 import ds.desktop.notify.DesktopNotify;
-
-
+import ds.desktop.notify.NotifyTheme;
+import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Beto
  */
-public class resultado extends javax.swing.JFrame {
-    
+public final class resultado extends javax.swing.JFrame {
+
+    String Test;
     private TrayIcon trayicon;
     private SystemTray systemtray;
-    VDalton vd= new VDalton();
+    File archivo;
+    File ruta = new File("C:/VDalton/Configuracion");
+    Inicio vd = new Inicio();
 
     /**
      * Creates new form resultado
      */
     public resultado() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
         user.setText(vd.usuario);
-        this.setIconImage(vd.imageicon.getImage());
+        setIconImage(vd.imageicon.getImage());
         instanciatray();
     }
-    
-    public void instanciatray(){
-        trayicon = new TrayIcon(vd.imageicon.getImage(),"VDalton Activo",popup);
+
+    public void instanciatray() {
+        trayicon = new TrayIcon(vd.imageicon.getImage(), "VDalton", popup);
         trayicon.setImageAutoSize(true);
         systemtray = SystemTray.getSystemTray();
     }
+
+    public void Registro() throws AWTException {
+        systemtray.add(trayicon);
+        this.setVisible(false);
+        DesktopNotify.setDefaultTheme(NotifyTheme.Dark);
+        DesktopNotify.showDesktopMessage("VDalton Activo", "Los servicios se encuetran activos,puedes volver desde el apartado de Notificaciones.", DesktopNotify.TIP, 9000L);
+    }
+
+    public void crearuta() {
+        if (!ruta.exists()) {
+            if (ruta.mkdirs()) {
+                System.out.println("Directorio creado");
+            } else {
+                System.out.println("Error al crear directorio");
+            }
+        }
+    }
+
+    public String cargarDatos() throws FileNotFoundException, IOException {
+
+        FileReader cargar = new FileReader("C:/VDalton/Configuracion/Configuracion.txt");
+        BufferedReader lee = new BufferedReader(cargar);
+        String linea;
+        while ((linea = lee.readLine()) != null) {
+            if ("Vision Normal".equals(linea)) {
+                this.Leyenda.setVisible(false);
+                this.tipo.setText(linea);
+                break;
+            }
+
+            if ("Deuteranopia".equals(linea)) {
+                this.tipo.setText(linea);
+                break;
+            }
+
+            if ("Protanopia".equals(linea)) {
+                this.tipo.setText(linea);
+                break;
+            }
+        }
+        return null;
+    }
+
+    public void guardarDatos(String Nombre, String TipoD) throws IOException {
+        crearuta();
+        Date date = new Date();
+        DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        FileWriter configuracion;
+        BufferedWriter w;
+        PrintWriter a;
+
+        try {
+            archivo = new File("C:/VDalton/Configuracion/Configuracion.txt");
+            configuracion = new FileWriter(archivo);
+            w = new BufferedWriter(configuracion);
+            a = new PrintWriter(w);
+
+            a.write("Usuario:");
+            a.append("\n" + Nombre);
+            a.append("\nTipo:" + "\n" + TipoD);
+            a.append("\nTest Realizado:" + "\n" + Test);
+            a.append("\nFecha:" + "\n" + dateFormat.format(date));
+            a.append("\nHora:" + "\n" + hourFormat.format(date));
+
+            a.close();
+            w.close();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Ha sucedio un error al guardar la configuracion" + e);
+        }
+
+    }
+
+    public void tipo_Daltonismo(String ResultadoTest, String test) {
+        if ("Normal".equals(ResultadoTest)) {
+            this.Leyenda.setVisible(false);
+            this.tipo.setText("Vision Normal");
+        }
+        if ("Deuteran".equals(ResultadoTest)) {
+            this.tipo.setText("Deuteranopia");
+            this.Mensaje.setText("ATENCION:\n" + "Te vez afectado por la falta de tonos rojos-verdes en los colores.\nCambiaremos la interfaz de tu sistema Windows para una mejor comodidad visual solo presiona Aceptar.");
+        }
+        if ("Protan".equals(ResultadoTest)) {
+            this.tipo.setText("Protanopia");
+            this.Mensaje.setText("ATENCION:" + "Cambiaremos la interfaz de tu sistema Windows \npara una mejor comodidad visual solo presiona Aceptar.");
+        }
+        Test = test;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,8 +151,14 @@ public class resultado extends javax.swing.JFrame {
         nuevotest = new java.awt.MenuItem();
         salir = new java.awt.MenuItem();
         jLabel3 = new javax.swing.JLabel();
+        Leyenda = new javax.swing.JLabel();
         user = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        tipo = new javax.swing.JLabel();
+        Mensaje = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        exit = new javax.swing.JButton();
+        minimizar = new javax.swing.JButton();
         ocultar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -85,55 +189,106 @@ public class resultado extends javax.swing.JFrame {
         popup.add(salir);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Tu tipo de Daltonimos el es Siguiente:");
-        jLabel3.setToolTipText("");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 570, 240));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/titulo_resultados.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
 
-        user.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        user.setForeground(new java.awt.Color(85, 84, 82));
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 60, 40));
+        Leyenda.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        Leyenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantalla_Principal/condicion_daltonismo.png"))); // NOI18N
+        Leyenda.setToolTipText("");
+        getContentPane().add(Leyenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 510, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/usuario.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 180, 100));
+        user.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        user.setForeground(new java.awt.Color(255, 255, 255));
+        user.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        user.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 100, 40));
 
-        ocultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/aceptar.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/icono_usuario.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 60, -1));
+
+        tipo.setFont(new java.awt.Font("Trebuchet MS", 1, 78)); // NOI18N
+        tipo.setForeground(new java.awt.Color(255, 255, 255));
+        tipo.setToolTipText("");
+        getContentPane().add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 530, 90));
+
+        Mensaje.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        getContentPane().add(Mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 600, 60));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/cuadro_traslucido.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 670, 320));
+
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_cerrar.png"))); // NOI18N
+        exit.setBorder(null);
+        exit.setBorderPainted(false);
+        exit.setContentAreaFilled(false);
+        exit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_cerrar_press.png"))); // NOI18N
+        exit.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_cerrar_press.png"))); // NOI18N
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitMouseClicked(evt);
+            }
+        });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, 40));
+
+        minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_minimize.png"))); // NOI18N
+        minimizar.setBorder(null);
+        minimizar.setBorderPainted(false);
+        minimizar.setContentAreaFilled(false);
+        minimizar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_minimize_press.png"))); // NOI18N
+        minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                minimizarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, -1, 40));
+
+        ocultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_aceptar.png"))); // NOI18N
         ocultar.setBorder(null);
         ocultar.setBorderPainted(false);
         ocultar.setContentAreaFilled(false);
-        ocultar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/aceptar_s.png"))); // NOI18N
+        ocultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ocultar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_aceptar_press.png"))); // NOI18N
+        ocultar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resultados/boton_aceptar_press.png"))); // NOI18N
         ocultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ocultarActionPerformed(evt);
             }
         });
-        getContentPane().add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 140, 70));
+        getContentPane().add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 500, 270, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondo.jpeg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 510));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Escoger_test/fondo_sinbotones.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ocultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ocultarActionPerformed
         // TODO add your handling code here:
-        try{
-            if(SystemTray.isSupported()){
-            systemtray.add(trayicon);
-            this.setVisible(false);
-            DesktopNotify.showDesktopMessage("VDalton Activo", "Los servicios se encuetran activos,puedes volver desde el apartado de Notificaciones.",DesktopNotify.TIP,7000L);
+        try {
+            if (SystemTray.isSupported()) {
+                systemtray.add(trayicon);
+                this.setVisible(false);
+                DesktopNotify.setDefaultTheme(NotifyTheme.Dark);
+                DesktopNotify.showDesktopMessage("VDalton Activo", "Los servicios se encuetran activos,puedes volver desde el apartado de Notificaciones.", DesktopNotify.TIP, 9000L);
+                DesktopNotify.showDesktopMessage(this.tipo.getText(), "ACTIVADO", DesktopNotify.TIP, 9000L);
+                guardarDatos(vd.usuario, this.tipo.getText());
+                
             }
         } catch (AWTException ex) {
-           JOptionPane.showMessageDialog(this, ex.getMessage());
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        } catch (IOException ex) {
+            Logger.getLogger(resultado.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_ocultarActionPerformed
 
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
         // TODO add your handling code here:
         systemtray.remove(trayicon);
+
+        //cargarDatos();
         this.setVisible(true);
     }//GEN-LAST:event_abrirActionPerformed
 
@@ -148,6 +303,16 @@ public class resultado extends javax.swing.JFrame {
         seleccion_test nuevo = new seleccion_test();
         nuevo.setVisible(true);
     }//GEN-LAST:event_nuevotestActionPerformed
+
+    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitMouseClicked
+
+    private void minimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizarMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_minimizarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -178,6 +343,7 @@ public class resultado extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new resultado().setVisible(true);
             }
@@ -185,14 +351,20 @@ public class resultado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Leyenda;
+    private javax.swing.JLabel Mensaje;
     private java.awt.MenuItem abrir;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton minimizar;
     private java.awt.MenuItem nuevotest;
     private javax.swing.JButton ocultar;
     private java.awt.PopupMenu popup;
     private java.awt.MenuItem salir;
+    private javax.swing.JLabel tipo;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

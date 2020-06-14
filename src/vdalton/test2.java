@@ -5,21 +5,27 @@
  */
 package vdalton;
 
-import javax.swing.ImageIcon;
+
 
 /**
  *
  * @author Beto
  */
 public class test2 extends javax.swing.JFrame {
+
+    Inicio vd = new Inicio();
     resultado configuracion = new resultado();
+
     /**
      * Creates new form test2
      */
     public test2() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        setIconImage(new ImageIcon(getClass().getResource("../resources/bitmap.png")).getImage());
+        setLocationRelativeTo(null);
+        setIconImage(vd.imageicon.getImage());
+        this.jButton2.setToolTipText("Cerrar");
+        this.jButton1.setToolTipText("Minimizar");
+        this.regresar.setToolTipText("Regresar");
     }
 
     /**
@@ -31,103 +37,239 @@ public class test2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        colorFinal = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        color6 = new javax.swing.JLabel();
+        color5 = new javax.swing.JLabel();
+        color4 = new javax.swing.JLabel();
+        color3 = new javax.swing.JLabel();
+        color2 = new javax.swing.JLabel();
+        color1 = new javax.swing.JLabel();
+        colorInicial = new javax.swing.JLabel();
+        Base4 = new javax.swing.JLabel();
+        Base1 = new javax.swing.JLabel();
+        Base5 = new javax.swing.JLabel();
+        Base2 = new javax.swing.JLabel();
+        Base6 = new javax.swing.JLabel();
+        Base3 = new javax.swing.JLabel();
         Listo = new javax.swing.JButton();
+        regresar = new javax.swing.JButton();
+        c = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("VDalton Beta 1.0");
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Ishihara/titulo2.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 360, 110));
+        colorFinal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/9.png"))); // NOI18N
+        getContentPane().add(colorFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 60, 70));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/indicaciones.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 580, 110));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/titulo_colores.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 360, 60));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 390, 70, 80));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones1.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 400, 40));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 70, 80));
+        color6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/7.png"))); // NOI18N
+        color6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color6MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, -1, 80));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 70, 80));
+        color5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/5.png"))); // NOI18N
+        color5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color5MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, -1, 80));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/9.png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 390, 70, 80));
+        color4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/2.png"))); // NOI18N
+        color4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color4MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, 80));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/1.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 70, 80));
+        color3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/6.png"))); // NOI18N
+        color3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color3MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, 80));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 70, 80));
+        color2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/8.png"))); // NOI18N
+        color2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color2MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, 70));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/7.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 70, 80));
+        color1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/4.png"))); // NOI18N
+        color1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                color1MouseDragged(evt);
+            }
+        });
+        getContentPane().add(color1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 70, 80));
+        colorInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/1.png"))); // NOI18N
+        getContentPane().add(colorInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, 70));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/5.png"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 70, 80));
+        Base4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 410, -1, 70));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/2.png"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 70, 80));
+        Base1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, 70));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/6.png"))); // NOI18N
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 70, 80));
+        Base5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, 70));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/8.png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 70, 80));
+        Base2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, -1, 70));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/4.png"))); // NOI18N
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 70, 80));
+        Base6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, 70));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vacio.png"))); // NOI18N
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, 70, 80));
+        Base3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
+        getContentPane().add(Base3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, -1, 70));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/farnsworth/fondosdc.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 700, 260));
-
-        Listo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/listo.png"))); // NOI18N
+        Listo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo.png"))); // NOI18N
         Listo.setBorder(null);
         Listo.setBorderPainted(false);
         Listo.setContentAreaFilled(false);
-        Listo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/listo_s.png"))); // NOI18N
+        Listo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
+        Listo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
         Listo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ListoActionPerformed(evt);
             }
         });
-        getContentPane().add(Listo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, -1, -1));
+        getContentPane().add(Listo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, -1, -1));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondo.jpeg"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_atras.png"))); // NOI18N
+        regresar.setBorder(null);
+        regresar.setBorderPainted(false);
+        regresar.setContentAreaFilled(false);
+        regresar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_atras_press.png"))); // NOI18N
+        regresar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_atras_press.png"))); // NOI18N
+        regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                regresarMousePressed(evt);
+            }
+        });
+        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 40, 50));
+
+        c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_traslucido.png"))); // NOI18N
+        getContentPane().add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 680, 300));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones3.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 690, 40));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/instrucciones2.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 430, 40));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_cerrar.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_cerrar_press.png"))); // NOI18N
+        jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_cerrar_press.png"))); // NOI18N
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, 50));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_minimize.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_minimize_press.png"))); // NOI18N
+        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_minimize_press.png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, 50));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/fondo_sinbotones.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void ListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListoActionPerformed
         // TODO add your handling code here:
         configuracion.setVisible(true);
         dispose();
     }//GEN-LAST:event_ListoActionPerformed
+
+    private void color1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color1MouseDragged
+        // TODO add your handling code here:
+        color1.setLocation(color1.getLocation().x + evt.getX() - color1.getWidth() / 2, color1.getLocation().y + evt.getY() - color1.getHeight() / 2);
+        if(color1.getLocation().y==Base1.getLocation().y){
+            if(color1.getLocation().x==Base1.getLocation().x){
+       
+            }
+        }        
+    }//GEN-LAST:event_color1MouseDragged
+
+    private void color2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color2MouseDragged
+        // TODO add your handling code here:
+        color2.setLocation(color2.getLocation().x + evt.getX() - color2.getWidth() / 2, color2.getLocation().y + evt.getY() - color2.getHeight() / 2);
+         
+    }//GEN-LAST:event_color2MouseDragged
+
+    private void color3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color3MouseDragged
+        // TODO add your handling code here:
+        color3.setLocation(color3.getLocation().x + evt.getX() - color3.getWidth() / 2, color3.getLocation().y + evt.getY() - color3.getHeight() / 2);
+    }//GEN-LAST:event_color3MouseDragged
+
+    private void color4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color4MouseDragged
+        // TODO add your handling code here:
+        color4.setLocation(color4.getLocation().x + evt.getX() - color4.getWidth() / 2, color4.getLocation().y + evt.getY() - color4.getHeight() / 2);
+    }//GEN-LAST:event_color4MouseDragged
+
+    private void color5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color5MouseDragged
+        // TODO add your handling code here:
+        color5.setLocation(color5.getLocation().x + evt.getX() - color5.getWidth() / 2, color5.getLocation().y + evt.getY() - color5.getHeight() / 2);
+    }//GEN-LAST:event_color5MouseDragged
+
+    private void color6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color6MouseDragged
+        // TODO add your handling code here:
+        color6.setLocation(color6.getLocation().x + evt.getX() - color6.getWidth() / 2, color6.getLocation().y + evt.getY() - color6.getHeight() / 2);
+    }//GEN-LAST:event_color6MouseDragged
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        // TODO add your handling code here:
+        setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jButton1MousePressed
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
+        // TODO add your handling code here:
+        seleccion_test obj = new seleccion_test();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_regresarMousePressed
 
     /**
      * @param args the command line arguments
@@ -165,24 +307,30 @@ public class test2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Base1;
+    private javax.swing.JLabel Base2;
+    private javax.swing.JLabel Base3;
+    private javax.swing.JLabel Base4;
+    private javax.swing.JLabel Base5;
+    private javax.swing.JLabel Base6;
     private javax.swing.JButton Listo;
+    private javax.swing.JLabel c;
+    private javax.swing.JLabel color1;
+    private javax.swing.JLabel color2;
+    private javax.swing.JLabel color3;
+    private javax.swing.JLabel color4;
+    private javax.swing.JLabel color5;
+    private javax.swing.JLabel color6;
+    private javax.swing.JLabel colorFinal;
+    private javax.swing.JLabel colorInicial;
     private javax.swing.JLabel fondo;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton regresar;
     // End of variables declaration//GEN-END:variables
+
 }
