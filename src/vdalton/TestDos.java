@@ -14,7 +14,7 @@ package vdalton;
 public class TestDos extends javax.swing.JFrame {
 
     Inicio vd = new Inicio();
-    Resultado configuracion = new Resultado();
+    Evaluacion configuracion = new Evaluacion();
 
     /**
      * Creates new form test2

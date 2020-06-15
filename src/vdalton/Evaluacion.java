@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  *
  * @author Beto
  */
-public final class Resultado extends javax.swing.JFrame {
+public class Evaluacion extends javax.swing.JFrame {
 
     String Test;
     private TrayIcon trayicon;
@@ -34,12 +34,13 @@ public final class Resultado extends javax.swing.JFrame {
     /**
      * Creates new form resultado
      */
-    public Resultado() {
+    public Evaluacion() {
         initComponents();
         setLocationRelativeTo(null);
         user.setText(vd.usuario);
         setIconImage(vd.imageicon.getImage());
         instanciatray();
+        
     }
 
     public void instanciatray() {
@@ -52,7 +53,7 @@ public final class Resultado extends javax.swing.JFrame {
         systemtray.add(trayicon);
         this.setVisible(false);
         DesktopNotify.setDefaultTheme(NotifyTheme.Dark);
-        DesktopNotify.showDesktopMessage("VDalton Activo", "Los servicios se encuetran activos,puedes volver desde el apartado de Notificaciones.", DesktopNotify.TIP, 9000L);
+        DesktopNotify.showDesktopMessage("VDalton Activo","Los servicios se encuetran activos,puedes volver desde el apartado de Notificaciones.", DesktopNotify.TIP, 9000L);
     }
 
     public void crearuta() {
@@ -336,7 +337,7 @@ public final class Resultado extends javax.swing.JFrame {
         } catch (AWTException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         } catch (IOException ex) {
-            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_ocultarActionPerformed
 
@@ -387,14 +388,16 @@ public final class Resultado extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -402,7 +405,7 @@ public final class Resultado extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Resultado().setVisible(true);
+                new Evaluacion().setVisible(true);
             }
         });
     }

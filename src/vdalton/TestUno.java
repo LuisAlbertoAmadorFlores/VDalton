@@ -19,7 +19,7 @@ public class TestUno extends javax.swing.JFrame {
     private int contador_protan = 0, contador_deuteran = 0, contador_preguntas = 0, contador_pNormal = 0;
     ImageIcon p1, p2, p3, p4, p5, p6, p7,error;
     Inicio vd = new Inicio();
-    Resultado configuracion = new Resultado();
+    Evaluacion configuracion = new Evaluacion();
     AudioClip sonido;
 
     /**

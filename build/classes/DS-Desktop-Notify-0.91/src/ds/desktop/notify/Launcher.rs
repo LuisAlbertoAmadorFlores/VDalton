@@ -1,1 +1,0 @@
-ds.desktop.notify.Launcher

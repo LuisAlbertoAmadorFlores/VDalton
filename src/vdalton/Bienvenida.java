@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
  *
  * @author Beto
  */
-public final class Bienvenida extends javax.swing.JFrame  implements Runnable{
+public class Bienvenida extends javax.swing.JFrame  implements Runnable{
     Inicio nv = new Inicio();
     private Thread tiempo;
 
@@ -110,7 +110,7 @@ public final class Bienvenida extends javax.swing.JFrame  implements Runnable{
         //</editor-fold>
 
         /* Create and display the form */
-        Resultado iniciado =new Resultado();
+        Evaluacion iniciado =new Evaluacion();
         File consulta =new File("C:/VDalton");
         java.awt.EventQueue.invokeLater(() -> {
         if(0==getJavaHome()){
