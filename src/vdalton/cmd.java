@@ -54,7 +54,7 @@ public class cmd {
 
     public void regProtanopia() {
         try {
-            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionNormal.reg");
+            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionProtonopia.reg");
             BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
             String resultado = null;
             while ((resultado = br.readLine()) != null) {
@@ -69,7 +69,7 @@ public class cmd {
 
     public void regDeuteronopia() {
         try {
-            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionNormal.reg");
+            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionDeuteronopia.reg");
             BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
             String resultado = null;
             while ((resultado = br.readLine()) != null) {
@@ -84,7 +84,7 @@ public class cmd {
 
     public void regGris() {
         try {
-            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionNormal.reg");
+            shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionGris.reg");
             BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
             String resultado = null;
             while ((resultado = br.readLine()) != null) {
