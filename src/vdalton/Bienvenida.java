@@ -113,10 +113,9 @@ public class Bienvenida extends javax.swing.JFrame  implements Runnable{
         Evaluacion iniciado =new Evaluacion();
         File consulta =new File("C:/VDalton");
         java.awt.EventQueue.invokeLater(() -> {
-        if(0==getJavaHome()){
-        
             try {
-                if(consulta.exists()) {
+                JOptionPane.showMessageDialog(null, "Recuerda que VDalton fue creado para ayudar a personas con algun tipo de Daltonismo");
+                if(consulta.exists()) {     
                     iniciado.Registro();
                     iniciado.cargarDatos();
                 } else {
@@ -126,9 +125,6 @@ public class Bienvenida extends javax.swing.JFrame  implements Runnable{
             } catch (AWTException | IOException ex) {
                 Logger.getLogger(Bienvenida.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }else{
-        JOptionPane.showMessageDialog(null, "No se encontro java instalado.\nPor favor instalalo https://www.java.com/es/download/");
-        }
         });       
     }
 
