@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author Beto
  */
-public class cmd {
+public class VDalton {
 
     Process shell;
 
@@ -38,6 +38,34 @@ public class cmd {
         }
     }
 
+    public void Ruta() {
+        try {
+            shell = Runtime.getRuntime().exec("powershell.exe Get-ChildItem -Path HKCU:/ | Select-Object name");
+            BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
+            String resultado = null;
+            while ((resultado = br.readLine()) != null) {
+                System.out.println(resultado);
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void Copia() {
+        try {
+            shell = Runtime.getRuntime().exec("powershell.exe Get-ChildItem -Path 'Microsoft.PowerShell.Core/Registry::HKEY_CURRENT_USER/Control Panel/Colors/'");
+            BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
+            String resultado = null;
+            while ((resultado = br.readLine()) != null) {
+                System.out.println(resultado);
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     public void regNormal() {
         try {
             shell = Runtime.getRuntime().exec("cmd /HKEY_CURRENT_USER/Control Panel/Colors/VisionNormal.reg");
@@ -48,7 +76,7 @@ public class cmd {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(cmd.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -62,7 +90,7 @@ public class cmd {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(cmd.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -77,7 +105,7 @@ public class cmd {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(cmd.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -92,7 +120,7 @@ public class cmd {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(cmd.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VDalton.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
