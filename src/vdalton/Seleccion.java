@@ -227,8 +227,7 @@ public class Seleccion extends javax.swing.JFrame {
 
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
         // TODO add your handling code here:
-        System.exit(0);
-        
+        Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_jButton2MousePressed
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
