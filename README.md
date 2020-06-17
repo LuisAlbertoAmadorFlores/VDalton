@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9815e7ee9b4849a59145552d81e74119)](https://app.codacy.com/manual/LuisAlbertoAmadorFlores/VDalton?utm_source=github.com&utm_medium=referral&utm_content=LuisAlbertoAmadorFlores/VDalton&utm_campaign=Badge_Grade_Dashboard)
+
 <img src="https://github.com/LuisAlbertoAmadorFlores/VDalton/blob/master/VDalton.png"  width="60" height="60">
 
 <h1><b>VDalton</b></h1>
