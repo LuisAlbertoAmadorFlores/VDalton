@@ -31,6 +31,7 @@ public class TestUno extends javax.swing.JFrame {
     public Inicio vd = new Inicio();
     public Evaluacion configuracion = new Evaluacion();
     public AudioClip sonido;
+    public int valor = 0;
 
     /**
      * Creates new form asda
@@ -768,7 +769,7 @@ public class TestUno extends javax.swing.JFrame {
          Icon error = new ImageIcon(getClass().getResource("/Test1/Ishikara/fondo_blanco/5.png"));
         select();
         if (this.contador_preguntas != 7) {
-            int valor = 0;
+            
             valor = 7 - this.contador_preguntas;
             sonido.play();
             JOptionPane.showMessageDialog(null,"Te han faltado preguntas por responder.\n"
