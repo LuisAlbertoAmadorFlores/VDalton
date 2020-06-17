@@ -1,6 +1,7 @@
 <img src="https://github.com/LuisAlbertoAmadorFlores/VDalton/blob/master/VDalton.png"  width="60" height="60">
 
-<h1><b>VDalton</b></h1>[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e5e6d4e8f62e47268c7c9a0385aea5be)](https://www.codacy.com/manual/LuisAlbertoAmadorFlores/VDalton?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuisAlbertoAmadorFlores/VDalton&amp;utm_campaign=Badge_Grade)
+<h1><b>VDalton</b></h1>
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e5e6d4e8f62e47268c7c9a0385aea5be)](https://www.codacy.com/manual/LuisAlbertoAmadorFlores/VDalton?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuisAlbertoAmadorFlores/VDalton&amp;utm_campaign=Badge_Grade)
 <em>Software desarrollado para el uso en Windows, para aquellas personas que presentan algun tipo de daltonismo.</em>
 
 
