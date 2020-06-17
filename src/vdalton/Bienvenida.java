@@ -123,7 +123,6 @@ public class Bienvenida extends javax.swing.JFrame  implements Runnable{
                 }
                 
             } catch (AWTException | IOException ex) {
-                
                 Logger.getLogger(Bienvenida.class.getName()).log(Level.SEVERE, null, ex);
             }
         });       

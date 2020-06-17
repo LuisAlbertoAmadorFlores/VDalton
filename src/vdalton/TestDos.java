@@ -328,11 +328,7 @@ public class TestDos extends javax.swing.JFrame {
     private void color1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color1MouseDragged
         // TODO add your handling code here:
         color1.setLocation(color1.getLocation().x + evt.getX() - color1.getWidth() / 2, color1.getLocation().y + evt.getY() - color1.getHeight() / 2);
-        if(color1.getLocation().y==Base1.getLocation().y){
-            if(color1.getLocation().x==Base1.getLocation().x){
-                System.out.println("Color1 movido");
-            }
-        }        
+                
     }//GEN-LAST:event_color1MouseDragged
 
     private void color2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color2MouseDragged
