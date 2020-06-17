@@ -27,8 +27,8 @@ public class Evaluacion extends javax.swing.JFrame {
     String Test;
     private TrayIcon trayicon;
     private SystemTray systemtray;
-    File archivo;
-    File ruta = new File("C:/VDalton/Configuracion");
+    public File archivo;
+    public File ruta = new File("C:/VDalton/Configuracion");
     Inicio vd = new Inicio();
 
     /**
@@ -49,7 +49,7 @@ public class Evaluacion extends javax.swing.JFrame {
         systemtray = SystemTray.getSystemTray();
     }
 
-    public void Registro() throws AWTException {
+    public void registro() throws AWTException {
         systemtray.add(trayicon);
         this.setVisible(false);
         DesktopNotify.setDefaultTheme(NotifyTheme.Dark);
@@ -324,6 +324,7 @@ public class Evaluacion extends javax.swing.JFrame {
 
     private void ocultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ocultarActionPerformed
         // TODO add your handling code here:
+        evt.getID();
         try {
             if (SystemTray.isSupported()) {
                 systemtray.add(trayicon);
@@ -343,6 +344,7 @@ public class Evaluacion extends javax.swing.JFrame {
 
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
         // TODO add your handling code here:
+        evt.getID();
         systemtray.remove(trayicon);
 
         //cargarDatos();
@@ -351,11 +353,13 @@ public class Evaluacion extends javax.swing.JFrame {
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
         // TODO add your handling code here:
+        evt.getID();
          Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
     private void nuevotestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevotestActionPerformed
         // TODO add your handling code here:
+        evt.getID();
         systemtray.remove(trayicon);
         Seleccion nuevo = new Seleccion();
         nuevo.setVisible(true);

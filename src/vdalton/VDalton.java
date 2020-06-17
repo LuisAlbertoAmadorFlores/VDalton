@@ -38,7 +38,7 @@ public class VDalton {
         }
     }
 
-    public void ruta() {
+    public void rutaReg() {
         try {
             shell = Runtime.getRuntime().exec("powershell.exe Get-ChildItem -Path HKCU:/ | Select-Object name");
             BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));
@@ -52,7 +52,7 @@ public class VDalton {
         }
     }
 
-    public void copia() {
+    public void copiaReg() {
         try {
             shell = Runtime.getRuntime().exec("powershell.exe Get-ChildItem -Path 'Microsoft.PowerShell.Core/Registry::HKEY_CURRENT_USER/Control Panel/Colors/'");
             BufferedReader br = new BufferedReader(new InputStreamReader(shell.getInputStream()));

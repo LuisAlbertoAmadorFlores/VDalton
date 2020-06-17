@@ -116,7 +116,7 @@ public class Bienvenida extends javax.swing.JFrame  implements Runnable{
             try {
                 JOptionPane.showMessageDialog(null, "Recuerda que VDalton fue creado para ayudar a personas con algun tipo de Daltonismo");
                 if(consulta.exists()) {     
-                    iniciado.Registro();
+                    iniciado.registro();
                     iniciado.cargarDatos();
                 } else {
                     new Bienvenida().setVisible(true);
