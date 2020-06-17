@@ -1,5 +1,5 @@
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e5e6d4e8f62e47268c7c9a0385aea5be)](https://www.codacy.com/manual/LuisAlbertoAmadorFlores/VDalton?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuisAlbertoAmadorFlores/VDalton&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9815e7ee9b4849a59145552d81e74119)](https://app.codacy.com/manual/LuisAlbertoAmadorFlores/VDalton?utm_source=github.com&utm_medium=referral&utm_content=LuisAlbertoAmadorFlores/VDalton&utm_campaign=Badge_Grade_Dashboard)
 
 <img src="https://github.com/LuisAlbertoAmadorFlores/VDalton/blob/master/VDalton.png"  width="60" height="60">
 
