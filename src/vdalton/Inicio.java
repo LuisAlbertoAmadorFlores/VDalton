@@ -7,7 +7,7 @@
 package vdalton;
 
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -135,6 +135,7 @@ public class Inicio extends javax.swing.JFrame{
 
     private void comenzarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comenzarMousePressed
         // TODO add your handling code here:
+        evt.getID();
         Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();
@@ -142,6 +143,7 @@ public class Inicio extends javax.swing.JFrame{
 
     private void salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMousePressed
         // TODO add your handling code here:
+        evt.getID();
         Runtime.getRuntime().exit(0);
         
     }//GEN-LAST:event_salirMousePressed
