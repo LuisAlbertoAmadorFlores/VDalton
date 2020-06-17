@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  * @author Beto
  */
 public class Bienvenida extends javax.swing.JFrame  implements Runnable{
-    Inicio nv = new Inicio();
+    public Inicio nv = new Inicio();
     private Thread tiempo;
 
     /**
@@ -123,6 +123,7 @@ public class Bienvenida extends javax.swing.JFrame  implements Runnable{
                 }
                 
             } catch (AWTException | IOException ex) {
+                
                 Logger.getLogger(Bienvenida.class.getName()).log(Level.SEVERE, null, ex);
             }
         });       

@@ -18,11 +18,12 @@ public class Inicio extends javax.swing.JFrame{
  
     
     public  String usuario;
+    public ImageIcon imageicon;
 
     /**
      *
      */
-    public ImageIcon imageicon;
+    
 
     /**
      * Creates new form Inicio

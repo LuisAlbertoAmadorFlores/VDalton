@@ -16,11 +16,21 @@ import javax.swing.Icon;
  */
 public class TestUno extends javax.swing.JFrame {
 
-    private int contador_protan = 0, contador_deuteran = 0, contador_preguntas = 0, contador_pNormal = 0;
-    ImageIcon p1, p2, p3, p4, p5, p6, p7,error;
-    Inicio vd = new Inicio();
+    private int contador_protan = 0;
+    private int contador_deuteran = 0;
+    private int contador_preguntas = 0;
+    private int contador_pNormal = 0;
+    public ImageIcon p1;
+    public ImageIcon p2;
+    public ImageIcon p3; 
+    public ImageIcon p4;
+    public ImageIcon p5;
+    public ImageIcon p6;
+    public ImageIcon p7;
+    public ImageIcon error;
+    public Inicio vd = new Inicio();
     public Evaluacion configuracion = new Evaluacion();
-    AudioClip sonido;
+    public AudioClip sonido;
 
     /**
      * Creates new form asda
@@ -194,15 +204,15 @@ public class TestUno extends javax.swing.JFrame {
 
         //Enivia respuesta como vision normal por evaluacion
         if (this.contador_pNormal >= this.contador_protan && this.contador_pNormal >= this.contador_deuteran) {
-            configuracion.tipo_Daltonismo("Normal", "Test 1");
+            configuracion.tipoDaltonismo("Normal", "Test 1");
         }
         //Ausencia de color verde
         if (this.contador_deuteran >= this.contador_protan && this.contador_deuteran >= this.contador_pNormal) {
-            configuracion.tipo_Daltonismo("Deuteran", "Test 1");
+            configuracion.tipoDaltonismo("Deuteran", "Test 1");
         }
         //Ausencia de color rojo
         if (this.contador_protan >= this.contador_pNormal && this.contador_protan >= this.contador_deuteran) {
-            configuracion.tipo_Daltonismo("Protan", "Test 1");
+            configuracion.tipoDaltonismo("Protan", "Test 1");
         }
 
     }
@@ -734,6 +744,7 @@ public class TestUno extends javax.swing.JFrame {
 
     private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
         // TODO add your handling code here:
+        evt.getID();
         Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();
@@ -741,16 +752,19 @@ public class TestUno extends javax.swing.JFrame {
 
     private void minimizarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizarMousePressed
         // TODO add your handling code here:
+        evt.getID();
         setExtendedState(ICONIFIED);
     }//GEN-LAST:event_minimizarMousePressed
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
+        evt.getID();
          Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_exitMousePressed
 
     private void listoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listoMousePressed
         // TODO add your handling code here:
+        evt.getID();
          Icon error = new ImageIcon(getClass().getResource("/Test1/Ishikara/fondo_blanco/5.png"));
         select();
         if (this.contador_preguntas != 7) {

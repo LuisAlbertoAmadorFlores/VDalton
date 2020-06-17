@@ -24,12 +24,12 @@ import java.util.logging.Logger;
  */
 public class Evaluacion extends javax.swing.JFrame {
 
-    String Test;
+    public String Test;
     private TrayIcon trayicon;
     private SystemTray systemtray;
     public File archivo;
     public File ruta = new File("C:/VDalton/Configuracion");
-    Inicio vd = new Inicio();
+    public Inicio vd = new Inicio();
 
     /**
      * Creates new form resultado
@@ -122,7 +122,7 @@ public class Evaluacion extends javax.swing.JFrame {
 
     }
 
-    public void tipo_Daltonismo(String ResultadoTest, String test) {
+    public void tipoDaltonismo(String ResultadoTest, String test) {
         if ("Normal".equals(ResultadoTest)) {
             this.Leyenda.setVisible(false);
             this.tipo.setText("Vision Normal");
@@ -367,12 +367,14 @@ public class Evaluacion extends javax.swing.JFrame {
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
         // TODO add your handling code here:
+        evt.getID();
          Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_exitMouseClicked
 
     private void minimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizarMouseClicked
         // TODO add your handling code here:
-
+        evt.getID();
+        setExtendedState(ICONIFIED);
     }//GEN-LAST:event_minimizarMouseClicked
 
     /**
@@ -392,13 +394,13 @@ public class Evaluacion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

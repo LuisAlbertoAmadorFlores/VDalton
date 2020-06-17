@@ -13,8 +13,8 @@ package vdalton;
  */
 public class TestDos extends javax.swing.JFrame {
 
-    Inicio vd = new Inicio();
-    Evaluacion configuracion = new Evaluacion();
+    public Inicio vd = new Inicio();
+    public Evaluacion configuracion = new Evaluacion();
 
     /**
      * Creates new form test2
@@ -53,7 +53,7 @@ public class TestDos extends javax.swing.JFrame {
         Base2 = new javax.swing.JLabel();
         Base6 = new javax.swing.JLabel();
         Base3 = new javax.swing.JLabel();
-        Listo = new javax.swing.JButton();
+        listo = new javax.swing.JButton();
         regresar = new javax.swing.JButton();
         fondoSecundario = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -128,15 +128,15 @@ public class TestDos extends javax.swing.JFrame {
 
         Base3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/cuadro_vacio_b.png"))); // NOI18N
 
-        Listo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo.png"))); // NOI18N
-        Listo.setBorder(null);
-        Listo.setBorderPainted(false);
-        Listo.setContentAreaFilled(false);
-        Listo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
-        Listo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
-        Listo.addActionListener(new java.awt.event.ActionListener() {
+        listo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo.png"))); // NOI18N
+        listo.setBorder(null);
+        listo.setBorderPainted(false);
+        listo.setContentAreaFilled(false);
+        listo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
+        listo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Test2/boton_listo_press.png"))); // NOI18N
+        listo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ListoActionPerformed(evt);
+                listoActionPerformed(evt);
             }
         });
 
@@ -211,7 +211,7 @@ public class TestDos extends javax.swing.JFrame {
                 .addComponent(Base5))
             .addGroup(layout.createSequentialGroup()
                 .addGap(320, 320, 320)
-                .addComponent(Listo))
+                .addComponent(listo))
             .addGroup(layout.createSequentialGroup()
                 .addGap(180, 180, 180)
                 .addComponent(color1))
@@ -276,7 +276,7 @@ public class TestDos extends javax.swing.JFrame {
                     .addComponent(Base3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Base5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
-                .addComponent(Listo))
+                .addComponent(listo))
             .addGroup(layout.createSequentialGroup()
                 .addGap(270, 270, 270)
                 .addComponent(color1))
@@ -318,18 +318,19 @@ public class TestDos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
    
-    private void ListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListoActionPerformed
+    private void listoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listoActionPerformed
         // TODO add your handling code here:
+        evt.getID();
         configuracion.setVisible(true);
         dispose();
-    }//GEN-LAST:event_ListoActionPerformed
+    }//GEN-LAST:event_listoActionPerformed
 
     private void color1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_color1MouseDragged
         // TODO add your handling code here:
         color1.setLocation(color1.getLocation().x + evt.getX() - color1.getWidth() / 2, color1.getLocation().y + evt.getY() - color1.getHeight() / 2);
         if(color1.getLocation().y==Base1.getLocation().y){
             if(color1.getLocation().x==Base1.getLocation().x){
-       
+                System.out.println("Color1 movido");
             }
         }        
     }//GEN-LAST:event_color1MouseDragged
@@ -369,7 +370,7 @@ public class TestDos extends javax.swing.JFrame {
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
         // TODO add your handling code here:
         evt.getID();
-        System.exit(0);
+        Runtime.getRuntime().exit(0);
     }//GEN-LAST:event_jButton2MousePressed
 
     private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
@@ -423,7 +424,6 @@ public class TestDos extends javax.swing.JFrame {
     private javax.swing.JLabel Base4;
     private javax.swing.JLabel Base5;
     private javax.swing.JLabel Base6;
-    private javax.swing.JButton Listo;
     private javax.swing.JLabel color1;
     private javax.swing.JLabel color2;
     private javax.swing.JLabel color3;
@@ -440,6 +440,7 @@ public class TestDos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton listo;
     private javax.swing.JButton regresar;
     // End of variables declaration//GEN-END:variables
 

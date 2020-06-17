@@ -53,7 +53,7 @@
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="320" pref="320" max="-2" attributes="0"/>
-              <Component id="Listo" min="-2" max="-2" attributes="0"/>
+              <Component id="listo" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="180" pref="180" max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
                   <Component id="Base5" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-              <Component id="Listo" min="-2" max="-2" attributes="0"/>
+              <Component id="listo" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="270" pref="270" max="-2" attributes="0"/>
@@ -321,7 +321,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Listo">
+    <Component class="javax.swing.JButton" name="listo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Test2/boton_listo.png"/>
@@ -339,7 +339,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="regresar">
