@@ -20,10 +20,7 @@ Opcion 2:<a href="https://drive.google.com/open?id=1KDWu1mYSR66w_KCKsDza6V-VB4gh
 
 Contacto:
 <table>
-<tr>
-    <th>Persona</th>
-    <th>Correo</th>
-</tr>
+<tr><th>Persona</th><th>Correo</th></tr>
 <tr><td>Luis Alberto Amador Flores</td><td>luis.amador@alumno.buap.mx</td></tr>
 <tr><td>Luis Adrian Perez SanMartin</td><td>luis.perezsm@alumno.buap.mx</td></tr>
 </table>
