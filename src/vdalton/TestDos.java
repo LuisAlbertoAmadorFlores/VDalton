@@ -362,16 +362,19 @@ public class TestDos extends javax.swing.JFrame {
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
         // TODO add your handling code here:
+        evt.getID();
         setExtendedState(ICONIFIED);
     }//GEN-LAST:event_jButton1MousePressed
 
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
         // TODO add your handling code here:
+        evt.getID();
         System.exit(0);
     }//GEN-LAST:event_jButton2MousePressed
 
     private void regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regresarMousePressed
         // TODO add your handling code here:
+        evt.getID();
         Seleccion obj = new Seleccion();
         obj.setVisible(true);
         dispose();

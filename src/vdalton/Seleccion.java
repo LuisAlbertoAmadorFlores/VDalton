@@ -237,6 +237,7 @@ public class Seleccion extends javax.swing.JFrame {
 
     private void test1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test1MousePressed
         // TODO add your handling code here:
+        evt.getID();
         TestUno obj = new TestUno();
         obj.setVisible(true);
         dispose();
@@ -244,6 +245,7 @@ public class Seleccion extends javax.swing.JFrame {
 
     private void test2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test2MousePressed
         // TODO add your handling code here:
+        evt.getID();
         TestDos vinculo = new TestDos();
         vinculo.setVisible(true);
         dispose();
